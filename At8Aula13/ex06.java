@@ -45,6 +45,7 @@ public class ex06 {
                 System.out.printf("Fim do programa! Seu estoque atual é de: %d \n", und);
                 break;
             }
+           
         }
     }   
 }

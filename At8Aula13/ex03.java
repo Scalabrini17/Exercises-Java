@@ -10,6 +10,7 @@ public class ex03 {
             System.out.printf("Digite a %dº venda: ", i);
             float num = sc.nextFloat(); 
             soma += num;
+            
         }
 
         float media = soma / 7;

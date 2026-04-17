@@ -36,15 +36,11 @@ public class ex07 {
                 System.out.print("Finalizando o programa! \n ");
                 break;
             }
-
         }
 
         System.out.printf("O valor total de todas as conversões é: R$%.2f \n", valorTotal);
         System.out.printf("O valor total de converções que foram feitas é: %d conversões \n", contagem);
-        
-        
-        //teste
-        //System.out.printf("Valor convertido: %.2f \n", valconvr);
 
+       
     }
 }

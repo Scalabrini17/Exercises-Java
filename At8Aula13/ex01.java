@@ -21,6 +21,7 @@ public class ex01 {
                 System.out.printf("Ouve um erro no seu código: %s", e);
             }
             
+            
         }
         if (num == 0){
             System.out.println("O número que você digitou é invalido!");
