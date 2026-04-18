@@ -11,12 +11,13 @@ public class ex07 {
         double valTaxa = 5.25;
         int contagem = 0;
         double valorTotal = 0;
+        String sair = "";
 
         System.out.println("Seja bem vindo ao sistema de conversão de moeda!");
         System.out.print("Você quer comerçar o programa digite (S):  ");
         String start = sc.next().toUpperCase();
 
-        while(true){
+        while(!(start.equalsIgnoreCase("N") || sair.equalsIgnoreCase("N"))){
 
             if(start.equalsIgnoreCase("S")){
                 contagem ++;
@@ -30,12 +31,8 @@ public class ex07 {
             }
 
             System.out.println("Você deseja continuar? Digite S para sim e N para não: ");
-            String sair = sc.next().toUpperCase();
+            sair = sc.next().toUpperCase();
             
-            if (start.equalsIgnoreCase("N") || sair.equalsIgnoreCase("N")){
-                System.out.print("Finalizando o programa! \n ");
-                break;
-            }
         }
 
         System.out.printf("O valor total de todas as conversões é: R$%.2f \n", valorTotal);
