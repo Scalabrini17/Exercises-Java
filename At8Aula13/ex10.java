@@ -66,7 +66,3 @@ public class ex10 {
     }
 }
 
-// Uma eleição tem 3 candidatos (numerados 1, 2 e 3), além das opções de voto nulo (0) e
-// encerrar a votação (9). O programa deve receber votos continuamente usando do while, ate
-// que o código 9 seja digitado. Ao final, exiba o total de votos por candidato, votos nulos,
-// total de votantes e o candidato vencedor.
