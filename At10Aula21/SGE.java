@@ -62,7 +62,6 @@ public class SGE{
                     int diasObs = sc.nextInt();
                     // Variaveis que recebem valores de dentro do for
                     int somaAtividades = 0;
-                    int mediaAtividades = somaAtividades /diasObs;
                     int maisdezAtividades = 0;
                     // Laço for para colocar as atividades de acordo com os dias 
                     for(int i = 1; i <= diasObs; i++){
@@ -75,9 +74,11 @@ public class SGE{
                         }
                     }
                     // Resultados da incerção de dados
+                    System.out.println();
                     System.out.printf("O total de atividades realizadas no periodo de %d dias foram %d atividades \n", diasObs, somaAtividades);
-                    System.out.printf("A média diaria de atividades realizadas foi de %d \n", mediaAtividades);
+                    System.out.printf("A média diaria de atividades realizadas foi de %d \n", (somaAtividades /diasObs));
                     System.out.printf("O total de dias em que as atividades foram mais que 10 em um dia só é de: %d \n", maisdezAtividades);
+                    System.out.println();
 
                  }
 
