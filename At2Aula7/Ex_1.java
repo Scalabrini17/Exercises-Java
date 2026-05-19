@@ -6,7 +6,7 @@ public class Ex_1{
     public static void main(String[] args) {
       Scanner  sc = new Scanner(System.in);
 
-        System.out.print("DIgite o valor de (a): ");
+        System.out.print("Digite o valor de (a): ");
         float valorA = sc.nextFloat();
 
         System.out.print("Digite o valor de (b positivo): ");
