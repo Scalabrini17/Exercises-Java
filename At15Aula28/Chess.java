@@ -161,12 +161,7 @@ public class Chess {
     }
 
 }
-//Se precisar do try catch
-//try {
-//    //Código
-//} catch (InterruptedException e) {
-//    System.out.printf("Erro: %s", e);
-//}
+
 
 // validação de linhas
 //while (!sc.hasNextInt()) {
