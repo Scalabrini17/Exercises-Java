@@ -82,8 +82,10 @@ public class Chess {
             System.out.print("Coluna: ");
             int colunainit = sc.nextInt();
 
-            while(tab[linhainit][colunainit].equalsIgnoreCase(".")){
-                System.out.print("Nessa posição não existe peça. Tente novamente!");
+            //Regra: Verificar se a posição nao está vazia
+            while(linhainit < 0 || linhainit > 7 || colunainit < 0 || colunainit > 7 || tab[linhainit][colunainit].equalsIgnoreCase(".")){
+                System.out.println("Nessa posição não existe peça. Tente novamente!");
+                System.out.println("Qual posição inicial da peça");
                 System.out.print("Linha: ");
                 linhainit = sc.nextInt();
                 System.out.print("Coluna: ");
@@ -93,20 +95,35 @@ public class Chess {
             // "Pegar peça"
             String peca = "";
 
-            //Verificar se a uma peça no lugar
+            //Regra: Verificar se a uma peça no lugar
             if(!tab[linhainit][colunainit].equalsIgnoreCase(".")){
                 // "Pegar peça"
                 peca = tab[linhainit][colunainit];
-            }else{
-
             }
 
             // Escolha da jogada
+
+            int linhaend = 0;
+            int colunaend = 0;
+
             System.out.println("Informe sua jogada!");
             System.out.print("Linha: ");
-            int linhaend = sc.nextInt();
+            linhaend = sc.nextInt();
             System.out.print("Coluna: ");
-            int colunaend = sc.nextInt();
+            colunaend = sc.nextInt();
+
+            //Regra: Não pode fazer jogadas fora do tab
+
+            //Verificação se a regra a cima está funcionando
+
+            while(linhaend < 0 || linhaend > 7 || colunaend < 0 || colunaend > 7) {
+                System.out.println("Você digitou uma jogada invalida. Tente novamente!");
+                System.out.println("Informe sua jogada!");
+                System.out.print("Linha: ");
+                linhaend = sc.nextInt();
+                System.out.print("Coluna: ");
+                colunaend = sc.nextInt();
+                }
 
             // Jogada
             tab[linhaend][colunaend] = peca;
@@ -150,4 +167,12 @@ public class Chess {
 //} catch (InterruptedException e) {
 //    System.out.printf("Erro: %s", e);
 //}
+
+// validação de linhas
+//while (!sc.hasNextInt()) {
+//        System.out.println("Digite apenas números.");
+//      sc.next();
+//      System.out.print("Linha: ");
+//  }
+
 
