@@ -63,38 +63,60 @@ public class Chess {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Vamos começar a jogar?");
+        System.out.println("Letras maiúsculas → peças pretas \n"+
+                "Letras minúsculas → peças brancas");
         System.out.print("Para iniciar digite (S): ");
         String start = sc.next().toUpperCase();
+        System.out.println("As peças brancas começa!");
 
         while(start.equalsIgnoreCase("S")){
             //gerando tabuleiro
             gerartab();
+
             //Captando resposta do usuário
+
             //Escolha da peça
             System.out.println("Qual posição inicial da peça");
+            System.out.print("Linha: ");
+            int linhainit = sc.nextInt();
             System.out.print("Coluna: ");
             int colunainit = sc.nextInt();
-            System.out.print("linha: ");
-            int linhainit = sc.nextInt();
+
+            // "Pegar peça"
+            String peca = tab[linhainit][colunainit];
+
             // Escolha da jogada
             System.out.println("Informe sua jogada!");
-            System.out.print("Coluna: ");
-            int colunaend = sc.nextInt();
             System.out.print("Linha: ");
             int linhaend = sc.nextInt();
+            System.out.print("Coluna: ");
+            int colunaend = sc.nextInt();
+
+            // Jogada
+            tab[linhaend][colunaend] = peca;
+
+            //esvaziando a casa
+            tab[linhainit][colunainit] = ".";
+
+            //Tabuleiro com a jogada
+            gerartab();
 
             // Saida do jogo
             System.out.print("Deseja continuar, se sim (S) se não (N): ");
             String saida = sc.next().toUpperCase();
             if(saida.equalsIgnoreCase("N")){
+
                 // Mensagem de despedida (Revisão do jogo)
                 System.out.print("Antes de sair aqui uma revisão da sua partida!");
+
+                //gerando tabuleiro
                 gerartab();
                 try {
                     Thread.sleep(3000);
                 } catch (InterruptedException e) {
                     System.out.printf("Erro: %s", e);
                 }
+
                 //mensagem e encerramento
                 System.out.print("Fechando o jogo...");
                 System.out.print("Até a proxima ;)");
