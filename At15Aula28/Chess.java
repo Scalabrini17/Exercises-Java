@@ -47,7 +47,7 @@ public class Chess {
     }
 
     public static void gerartab(){
-        System.out.println("   0 1 2 3 4 5 6 7");
+        System.out.println("    0 1 2 3 4 5 6 7");
         for(int i = 0; i < tab.length; i++){
             System.out.print(" " + i);
             for(int j = 0; j < tab[i].length; j++){
