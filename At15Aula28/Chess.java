@@ -82,8 +82,24 @@ public class Chess {
             System.out.print("Coluna: ");
             int colunainit = sc.nextInt();
 
+            while(tab[linhainit][colunainit].equalsIgnoreCase(".")){
+                System.out.print("Nessa posição não existe peça. Tente novamente!");
+                System.out.print("Linha: ");
+                linhainit = sc.nextInt();
+                System.out.print("Coluna: ");
+                colunainit = sc.nextInt();
+            }
+
             // "Pegar peça"
-            String peca = tab[linhainit][colunainit];
+            String peca = "";
+
+            //Verificar se a uma peça no lugar
+            if(!tab[linhainit][colunainit].equalsIgnoreCase(".")){
+                // "Pegar peça"
+                peca = tab[linhainit][colunainit];
+            }else{
+
+            }
 
             // Escolha da jogada
             System.out.println("Informe sua jogada!");
